@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Language Detection </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Sign Language Detection</h1>
+      <p>Using Teachable Machine Image Model and webcam predictions.</p>
+    </header>
+
+    <section class="card">
+      <div class="intro">
+        <h2>How it works</h2>
+        <p>Click <strong>Start</strong> to initialize the model and camera. The demo will continuously predict sign language labels from your webcam feed.</p>
+        <p class="disclaimer"><strong>Disclaimer:</strong> For best results, keep your background clear and uncluttered, and perform the hand signals cleanly and centered in the camera view.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Clear Background</h3>
+          <p>Use a plain backdrop so the model can focus on your hand gesture.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Center Your Hand</h3>
+          <p>Keep your hand centered and hold gestures steady for better accuracy.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Use Proper Signs</h3>
+          <p>Show distinct hand shapes and avoid overlapping fingers.</p>
+        </article>
+      </div>
+
+      <div class="controls">
+        <button id="start-button" type="button">Start</button>
+      </div>
+
+      <div class="preview">
+        <div id="webcam-container" class="webcam-box"></div>
+        <div class="label-box">
+          <div class="label-title">Predictions</div>
+          <div id="label-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Model source: Teachable Machine Image Model</p>
+      <p>URL: <a href="https://teachablemachine.withgoogle.com/models/6k9kmqsbht/" target="_blank" rel="noreferrer">6k9kmqsbht</a></p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
